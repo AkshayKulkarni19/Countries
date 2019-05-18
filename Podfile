@@ -7,6 +7,8 @@ target 'Countries' do
 
   # Pods for Countries
     pod 'Alamofire', '~> 4.8.0'
+    pod 'RealmSwift'
+    pod 'SDWebImage'
 
   target 'CountriesTests' do
     inherit! :search_paths

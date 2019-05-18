@@ -48,7 +48,9 @@ class CountryDetailsViewController: UIViewController {
     */
     
     @objc func saveTapped() {
-        
+        if let selectedCountry = presenter?.getSelectedCountry() {
+            presenter?.saveCountry(country: selectedCountry)
+        }
     }
 
 }

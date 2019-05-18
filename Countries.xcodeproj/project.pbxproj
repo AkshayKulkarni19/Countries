@@ -37,6 +37,12 @@
 		79CF94E7228D0A9F00925AD7 /* CountryDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94E5228D0A9F00925AD7 /* CountryDetailsTableViewCell.swift */; };
 		79CF94E8228D0A9F00925AD7 /* CountryDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79CF94E6228D0A9F00925AD7 /* CountryDetailsTableViewCell.xib */; };
 		79CF94EC228DBD4300925AD7 /* CountryDetailFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94EB228DBD4300925AD7 /* CountryDetailFieldsModel.swift */; };
+		79CF94F0228E8DB900925AD7 /* DatabaseCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94EF228E8DB900925AD7 /* DatabaseCore.swift */; };
+		79CF94F2228E8E5C00925AD7 /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94F1228E8E5C00925AD7 /* NetworkConnectivity.swift */; };
+		79CF94F4228E937600925AD7 /* SaveCountryInDBUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94F3228E937600925AD7 /* SaveCountryInDBUseCase.swift */; };
+		79CF94F6228E9F0F00925AD7 /* SaveCountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94F5228E9F0F00925AD7 /* SaveCountryRepository.swift */; };
+		79CF94F8228E9FDE00925AD7 /* SaveCountryInDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94F7228E9FDE00925AD7 /* SaveCountryInDBService.swift */; };
+		79CF94FA228EEAC200925AD7 /* CountryInfoDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF94F9228EEAC200925AD7 /* CountryInfoDBModel.swift */; };
 		C444E45527F2DAA52CE5F638 /* Pods_CountriesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C76C9D29F81B823B44B8583 /* Pods_CountriesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +93,12 @@
 		79CF94E5228D0A9F00925AD7 /* CountryDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		79CF94E6228D0A9F00925AD7 /* CountryDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		79CF94EB228DBD4300925AD7 /* CountryDetailFieldsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailFieldsModel.swift; sourceTree = "<group>"; };
+		79CF94EF228E8DB900925AD7 /* DatabaseCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseCore.swift; sourceTree = "<group>"; };
+		79CF94F1228E8E5C00925AD7 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
+		79CF94F3228E937600925AD7 /* SaveCountryInDBUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCountryInDBUseCase.swift; sourceTree = "<group>"; };
+		79CF94F5228E9F0F00925AD7 /* SaveCountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCountryRepository.swift; sourceTree = "<group>"; };
+		79CF94F7228E9FDE00925AD7 /* SaveCountryInDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCountryInDBService.swift; sourceTree = "<group>"; };
+		79CF94F9228EEAC200925AD7 /* CountryInfoDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoDBModel.swift; sourceTree = "<group>"; };
 		8C76C9D29F81B823B44B8583 /* Pods_CountriesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AB28C6C6F8EC93C18D563A /* Pods-CountriesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1C493774DB4911D773E8D33 /* Pods-CountriesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				79CF94A1228B3A0100925AD7 /* CountryResponse.swift */,
+				79CF94F9228EEAC200925AD7 /* CountryInfoDBModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 		79CF94A2228B3A0100925AD7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				79CF94EF228E8DB900925AD7 /* DatabaseCore.swift */,
 				79CF94A3228B3A0100925AD7 /* BaseService.swift */,
 			);
 			path = Common;
@@ -200,6 +214,8 @@
 			children = (
 				79CF94A5228B3A0100925AD7 /* FetchCountriesService.swift */,
 				79CF94BF228C080B00925AD7 /* FetchCountriesRepository.swift */,
+				79CF94F5228E9F0F00925AD7 /* SaveCountryRepository.swift */,
+				79CF94F7228E9FDE00925AD7 /* SaveCountryInDBService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -227,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				79CF94B4228BE23600925AD7 /* Logger.swift */,
+				79CF94F1228E8E5C00925AD7 /* NetworkConnectivity.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -237,6 +254,7 @@
 				79CF94C4228C184800925AD7 /* Entity */,
 				79CF94C2228C0BB400925AD7 /* FetchCountriesUseCase.swift */,
 				79CF94C7228C1BB200925AD7 /* CountryUIMapper.swift */,
+				79CF94F3228E937600925AD7 /* SaveCountryInDBUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -469,12 +487,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Countries/Pods-Countries-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,10 +544,16 @@
 				79CF94B5228BE23600925AD7 /* Logger.swift in Sources */,
 				79CF94E7228D0A9F00925AD7 /* CountryDetailsTableViewCell.swift in Sources */,
 				79CF94DF228C7AF200925AD7 /* CountryDetailsViewController.swift in Sources */,
+				79CF94F8228E9FDE00925AD7 /* SaveCountryInDBService.swift in Sources */,
+				79CF94FA228EEAC200925AD7 /* CountryInfoDBModel.swift in Sources */,
 				79CF9480228B39B800925AD7 /* AppDelegate.swift in Sources */,
 				79CF94AB228B3A0100925AD7 /* Constants.swift in Sources */,
 				79CF94C0228C080C00925AD7 /* FetchCountriesRepository.swift in Sources */,
+				79CF94F0228E8DB900925AD7 /* DatabaseCore.swift in Sources */,
+				79CF94F2228E8E5C00925AD7 /* NetworkConnectivity.swift in Sources */,
+				79CF94F6228E9F0F00925AD7 /* SaveCountryRepository.swift in Sources */,
 				79CF94C6228C186600925AD7 /* CountryInfo.swift in Sources */,
+				79CF94F4228E937600925AD7 /* SaveCountryInDBUseCase.swift in Sources */,
 				79CF94E1228C7CCB00925AD7 /* CountryDetailsConfigurator.swift in Sources */,
 				79CF94C3228C0BB400925AD7 /* FetchCountriesUseCase.swift in Sources */,
 				79CF94D3228C501F00925AD7 /* CountryTableViewCell.swift in Sources */,

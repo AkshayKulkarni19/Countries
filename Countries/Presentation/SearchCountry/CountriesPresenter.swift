@@ -11,6 +11,7 @@ import Foundation
 protocol CountriesPresenter {
     func getNumberOfCountries() -> Int
     func fetchCountries(with searchText: String)
+    func fetchCountriesFromDB()
     func getCountry(at index: Int) -> CountryInfo
 }
 
@@ -29,8 +30,22 @@ class CountriesPresenterImpl: CountriesPresenter {
     }
     
     func fetchCountries(with searchText: String) {
+        
         fetchCountriesUseCase?.fetchCountriesFromService(with: searchText, completion: { [weak self] (countriesList) in
             switch countriesList{
+            case .success(let countriesInfo):
+                self?.countries = countriesInfo
+            case .failure(let error):
+                print(error)
+            }
+            self?.countriesView.reloadData()
+        })
+        
+    }
+    
+    func fetchCountriesFromDB() {
+        fetchCountriesUseCase?.fetchAllCountriesFromDB(completion: { [weak self] (countryInfoList) in
+            switch countryInfoList{
             case .success(let countriesInfo):
                 self?.countries = countriesInfo
             case .failure(let error):

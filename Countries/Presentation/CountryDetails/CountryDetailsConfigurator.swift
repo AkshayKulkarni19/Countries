@@ -19,8 +19,10 @@ class CountryDetailsConfiguratorImpl: CountryDetailsConfigurator {
     }
     
     func configure(viewcontroller: CountryDetailsViewController){
-        
-        let presenter = CountryDetailsPresenterImpl(country: self.countryInfo, countriesDetailsVC: viewcontroller)
+        let service = SaveCountryInDBServiceImpl()
+        let repository = SaveCountryRepositoryImpl(service: service)
+        let saveCountryUseCase = SaveCountryInDBUseCaseImpl(repository: repository)
+        let presenter = CountryDetailsPresenterImpl(country: self.countryInfo, countriesDetailsVC: viewcontroller, saveCountryUseCase: saveCountryUseCase)
         viewcontroller.presenter = presenter
     }
 }
