@@ -1,19 +1,16 @@
 //
-//  CountryTableViewCell.swift
+//  FlagTableViewCell.swift
 //  Countries
 //
-//  Created by Akshay Kulkarni on 15/05/19.
+//  Created by Akshay Kulkarni on 18/05/19.
 //  Copyright © 2019 Akshay. All rights reserved.
 //
 
 import UIKit
-import SVGKit
 
-class CountryTableViewCell: UITableViewCell {
+class FlagTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var flagImage: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,12 +22,8 @@ class CountryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with country: CountryInfo) {
-        self.flagImage.image = UIImage()
-        countryName.text = country.name
-        if let flagURLstr = country.flag {
-            self.flagImage.cacheImage(urlString: flagURLstr)
-        }
+    func configureImage(from url: String) {
+        flagImage.cacheImage(urlString: url)
     }
     
 }

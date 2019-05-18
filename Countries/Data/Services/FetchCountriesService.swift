@@ -24,6 +24,10 @@ class FetchCountriesServiceImpl: BaseService, FetchCountriesService {
             return
         }
         
+        //Cancel the request if already being processed. This is helpful in case of keydebouncing
+        if dataRequest != nil {
+            cancelRequest()
+        }
         
         self.loadData(type: [CountryResponse].self,
                       url: url,

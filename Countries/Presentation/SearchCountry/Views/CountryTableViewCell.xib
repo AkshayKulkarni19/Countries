@@ -25,28 +25,27 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-eY-gbu">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-m8-HM2">
                         <rect key="frame" x="16" y="11" width="45" height="30"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="NfJ-r8-gM3"/>
-                            <constraint firstAttribute="width" constant="45" id="Q6y-RT-RHh"/>
+                            <constraint firstAttribute="height" constant="30" id="Oz9-KA-Fae"/>
+                            <constraint firstAttribute="width" constant="45" id="jdQ-xD-a12"/>
                         </constraints>
-                    </view>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="R89-ap-Ex9" secondAttribute="bottom" constant="14" id="6Rw-8P-jE0"/>
+                    <constraint firstItem="R89-ap-Ex9" firstAttribute="leading" secondItem="uZU-m8-HM2" secondAttribute="trailing" constant="8" id="D8a-JJ-e9N"/>
                     <constraint firstItem="R89-ap-Ex9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="DAc-vp-z4r"/>
+                    <constraint firstItem="uZU-m8-HM2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UOv-Fs-tfG"/>
                     <constraint firstAttribute="trailing" secondItem="R89-ap-Ex9" secondAttribute="trailing" constant="8" id="lfZ-1q-QQK"/>
-                    <constraint firstItem="rNL-eY-gbu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="n06-J3-jQn"/>
-                    <constraint firstItem="rNL-eY-gbu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="rHg-F1-jeY"/>
-                    <constraint firstItem="R89-ap-Ex9" firstAttribute="leading" secondItem="rNL-eY-gbu" secondAttribute="trailing" constant="8" id="sB5-Y3-u1A"/>
+                    <constraint firstItem="uZU-m8-HM2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="vQl-9Y-Q6y"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="countryName" destination="R89-ap-Ex9" id="vaR-Zg-scf"/>
-                <outlet property="flagImage" destination="rNL-eY-gbu" id="g4T-Yr-Qtc"/>
+                <outlet property="flagImage" destination="uZU-m8-HM2" id="bpv-de-Oz9"/>
             </connections>
             <point key="canvasLocation" x="120" y="77.361319340329842"/>
         </tableViewCell>

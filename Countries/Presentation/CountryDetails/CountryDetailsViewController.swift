@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol CountryDetailsView {
-    
-}
-
 class CountryDetailsViewController: UIViewController {
 
     @IBOutlet weak var countryDetailTableView: UITableView! {
@@ -19,8 +15,10 @@ class CountryDetailsViewController: UIViewController {
             countryDetailTableView.delegate = self
             countryDetailTableView.dataSource = self
             countryDetailTableView.register(UINib(nibName: "CountryDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "CountryDetailsTableViewCell")
+            countryDetailTableView.register(UINib(nibName: "FlagTableViewCell", bundle: nil), forCellReuseIdentifier: "FlagTableViewCell")
             countryDetailTableView.rowHeight = UITableView.automaticDimension
             countryDetailTableView.estimatedRowHeight = 44
+            countryDetailTableView.sectionHeaderHeight = 125
         }
     }
     var configurator: CountryDetailsConfigurator!
@@ -34,6 +32,7 @@ class CountryDetailsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = presenter?.getSelectedCountry().name
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
+        countryDetailTableView.register(UINib(nibName: "FlagHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "FlagHeaderView")
     }
     
 
@@ -55,10 +54,6 @@ class CountryDetailsViewController: UIViewController {
 
 }
 
-extension CountryDetailsViewController: CountryDetailsView {
-    
-}
-
 extension CountryDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,4 +70,17 @@ extension CountryDetailsViewController: UITableViewDelegate, UITableViewDataSour
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FlagTableViewCell") as? FlagTableViewCell {
+            if let flagUrl = presenter?.getSelectedCountry().flag {
+                cell.configureImage(from: flagUrl)
+            }
+            return cell
+        }
+        return UIView()
+    }
 }

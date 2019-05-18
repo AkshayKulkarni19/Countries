@@ -19,13 +19,12 @@ protocol CountryDetailsPresenter {
 class CountryDetailsPresenterImpl: CountryDetailsPresenter {
     
     let country: CountryInfo
-    private let countryDetailsView: CountryDetailsView
+//    private let countryDetailsView: CountryDetailsView
     private var countryDetailFieldsModels = [CountryDetailFieldsModel]()
     let saveCountryUseCase: SaveCountryInDBUseCase?
     
-    init(country: CountryInfo, countriesDetailsVC: CountryDetailsView, saveCountryUseCase: SaveCountryInDBUseCase) {
+    init(country: CountryInfo, saveCountryUseCase: SaveCountryInDBUseCase) {
         self.country = country
-        self.countryDetailsView = countriesDetailsVC
         self.saveCountryUseCase = saveCountryUseCase
     }
     
