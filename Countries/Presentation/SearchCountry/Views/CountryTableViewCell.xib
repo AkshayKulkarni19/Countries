@@ -15,38 +15,38 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryTableViewCell" rowHeight="52" id="KGk-i7-Jjw" customClass="CountryTableViewCell" customModule="Countries" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X64-qr-0Ra">
-                        <rect key="frame" x="16" y="11" width="48" height="29"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="29" id="5DC-Zf-IPR"/>
-                            <constraint firstAttribute="width" constant="48" id="niR-n6-Iyh"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R89-ap-Ex9">
-                        <rect key="frame" x="72" y="14" width="248" height="23"/>
+                        <rect key="frame" x="69" y="14" width="243" height="23.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-eY-gbu">
+                        <rect key="frame" x="16" y="11" width="45" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="NfJ-r8-gM3"/>
+                            <constraint firstAttribute="width" constant="45" id="Q6y-RT-RHh"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="R89-ap-Ex9" secondAttribute="bottom" constant="14" id="6Rw-8P-jE0"/>
                     <constraint firstItem="R89-ap-Ex9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="DAc-vp-z4r"/>
-                    <constraint firstItem="R89-ap-Ex9" firstAttribute="centerY" secondItem="X64-qr-0Ra" secondAttribute="centerY" id="EYu-sd-f1m"/>
-                    <constraint firstItem="R89-ap-Ex9" firstAttribute="leading" secondItem="X64-qr-0Ra" secondAttribute="trailing" constant="8" id="RIn-59-oKS"/>
-                    <constraint firstItem="X64-qr-0Ra" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="URD-zS-pZb"/>
-                    <constraint firstAttribute="trailing" secondItem="R89-ap-Ex9" secondAttribute="trailing" id="lfZ-1q-QQK"/>
-                    <constraint firstItem="X64-qr-0Ra" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="qka-jt-4wr"/>
+                    <constraint firstAttribute="trailing" secondItem="R89-ap-Ex9" secondAttribute="trailing" constant="8" id="lfZ-1q-QQK"/>
+                    <constraint firstItem="rNL-eY-gbu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="n06-J3-jQn"/>
+                    <constraint firstItem="rNL-eY-gbu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="rHg-F1-jeY"/>
+                    <constraint firstItem="R89-ap-Ex9" firstAttribute="leading" secondItem="rNL-eY-gbu" secondAttribute="trailing" constant="8" id="sB5-Y3-u1A"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="countryName" destination="R89-ap-Ex9" id="vaR-Zg-scf"/>
-                <outlet property="flagImage" destination="X64-qr-0Ra" id="sDc-aj-bKg"/>
+                <outlet property="flagImage" destination="rNL-eY-gbu" id="g4T-Yr-Qtc"/>
             </connections>
             <point key="canvasLocation" x="120" y="77.361319340329842"/>
         </tableViewCell>

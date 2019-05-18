@@ -99,6 +99,7 @@
 		79CF94F5228E9F0F00925AD7 /* SaveCountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCountryRepository.swift; sourceTree = "<group>"; };
 		79CF94F7228E9FDE00925AD7 /* SaveCountryInDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCountryInDBService.swift; sourceTree = "<group>"; };
 		79CF94F9228EEAC200925AD7 /* CountryInfoDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoDBModel.swift; sourceTree = "<group>"; };
+		79CF9529228FD4CE00925AD7 /* Countries-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Countries-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		8C76C9D29F81B823B44B8583 /* Pods_CountriesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AB28C6C6F8EC93C18D563A /* Pods-CountriesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1C493774DB4911D773E8D33 /* Pods-CountriesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 		79CF947E228B39B800925AD7 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				79CF9529228FD4CE00925AD7 /* Countries-Bridging-Header.h */,
 				79CF94C9228C278500925AD7 /* Presentation */,
 				79CF94C1228C0B8D00925AD7 /* Domain */,
 				79CF94A6228B3A0100925AD7 /* Application */,
@@ -487,18 +489,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Countries/Pods-Countries-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -734,6 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Countries-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

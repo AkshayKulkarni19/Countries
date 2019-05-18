@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SDWebImage
+import SVGKit
 
 class CountryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countryName: UILabel!
-    @IBOutlet weak var flagImage: UIImageView!
+    @IBOutlet weak var flagImage: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,9 +27,18 @@ class CountryTableViewCell: UITableViewCell {
     
     func configure(with country: CountryInfo) {
         countryName.text = country.name
-        if let flagURL = country.flag {
-            flagImage.sd_setImage(with: URL(string: flagURL), completed: nil)
+        if let flagURLstr = country.flag, let flagURl = URL(string: flagURLstr) {
+            let svgImage = SVGKImage(contentsOf: flagURl)
+            
         }
+        /*if let flagURLstr = country.flag, let flagURl = URL(string: flagURLstr) {
+//            let flagImageVw = UIView(SVGURL: flagURl)
+            let flagImageVw = UIView(SVGURL: flagURl) { (svgLayer) in
+                svgLayer.fillColor = UIColor(red:0.52, green:0.16, blue:0.32, alpha:1.00).cgColor
+                svgLayer.resizeToFit(self.flagImage.bounds)
+            }
+            flagImage.addSubview(flagImageVw)
+        }*/
     }
     
 }
