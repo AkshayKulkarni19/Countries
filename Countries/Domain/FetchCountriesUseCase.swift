@@ -9,8 +9,10 @@
 import Foundation
 
 typealias CountryInfocompletion = (APIResult<[CountryInfo]>) -> Void
+
 protocol FetchCountriesUseCase {
     func fetchCountriesFromService(with searchText: String, completion: @escaping CountryInfocompletion)
+    func fetchAllCountriesFromDB(completion: @escaping CountryInfocompletion)
 }
 
 class FetchCountriesUseCaseImpl: FetchCountriesUseCase {
@@ -33,4 +35,17 @@ class FetchCountriesUseCaseImpl: FetchCountriesUseCase {
             }
         }
     }
+    
+    func fetchAllCountriesFromDB(completion: @escaping CountryInfocompletion) {
+        fetchCountriesRepository.fetchAllCountriesFromDB { (countryInfoDB) in
+            switch countryInfoDB {
+            case .success(let countryDB):
+                let countries = CountryUIMapper.convertDBToUI(countryResponse: countryDB)
+                completion(.success(countries))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
 }

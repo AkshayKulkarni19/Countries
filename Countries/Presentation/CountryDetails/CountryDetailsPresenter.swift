@@ -13,6 +13,7 @@ protocol CountryDetailsPresenter {
     func getNumberOfDetails() -> Int
     func getDetails(at index: Int) -> CountryDetailFieldsModel
     func getSelectedCountry() -> CountryInfo
+    func saveCountry(country: CountryInfo)
 }
 
 class CountryDetailsPresenterImpl: CountryDetailsPresenter {
@@ -20,10 +21,12 @@ class CountryDetailsPresenterImpl: CountryDetailsPresenter {
     let country: CountryInfo
     private let countryDetailsView: CountryDetailsView
     private var countryDetailFieldsModels = [CountryDetailFieldsModel]()
+    let saveCountryUseCase: SaveCountryInDBUseCase?
     
-    init(country: CountryInfo, countriesDetailsVC: CountryDetailsView) {
+    init(country: CountryInfo, countriesDetailsVC: CountryDetailsView, saveCountryUseCase: SaveCountryInDBUseCase) {
         self.country = country
         self.countryDetailsView = countriesDetailsVC
+        self.saveCountryUseCase = saveCountryUseCase
     }
     
     func prepareFields() {
@@ -34,9 +37,9 @@ class CountryDetailsPresenterImpl: CountryDetailsPresenter {
             countryDetailFieldsModel.cellValue = capital
             countryDetailFieldsModels.append(countryDetailFieldsModel)
         }
-        if let callingCodes = country.callingCodes {
+        if !country.callingCodes.isEmpty {
             countryDetailFieldsModel.cellContentType = CellContentType.callingCode
-            countryDetailFieldsModel.cellValue = callingCodes.joined(separator: "\n")
+            countryDetailFieldsModel.cellValue = country.callingCodes.joined(separator: "\n")
             countryDetailFieldsModels.append(countryDetailFieldsModel)
         }
         if let region = country.region {
@@ -49,9 +52,9 @@ class CountryDetailsPresenterImpl: CountryDetailsPresenter {
             countryDetailFieldsModel.cellValue = subRegion
             countryDetailFieldsModels.append(countryDetailFieldsModel)
         }
-        if let timeZones = country.timezones {
+        if !country.timezones.isEmpty {
             countryDetailFieldsModel.cellContentType = CellContentType.timeZone
-            countryDetailFieldsModel.cellValue = timeZones.joined(separator: "\n")
+            countryDetailFieldsModel.cellValue = country.timezones.joined(separator: "\n")
             countryDetailFieldsModels.append(countryDetailFieldsModel)
         }
         if let languages = country.languages {
@@ -78,5 +81,9 @@ class CountryDetailsPresenterImpl: CountryDetailsPresenter {
     
     func getSelectedCountry() -> CountryInfo {
         return country
+    }
+    
+    func saveCountry(country: CountryInfo) {
+        saveCountryUseCase?.saveCountryInDB(countryToSave: country)
     }
 }

@@ -40,6 +40,9 @@ class CountriesViewController: UIViewController {
         definesPresentationContext = true
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Navigation.Title".localized
+        if !NetworkConnectivity.sharedInstance.isConnectedToInternet() {
+            presenter?.fetchCountriesFromDB()
+        }
     }
     
     /*
@@ -57,7 +60,6 @@ class CountriesViewController: UIViewController {
             router?.prepare(for: segue, sender: sender, country: selectedCountry)
         }
     }
-
 }
 
 extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {

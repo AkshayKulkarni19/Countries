@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CountryTableViewCell: UITableViewCell {
 
@@ -26,7 +27,9 @@ class CountryTableViewCell: UITableViewCell {
     
     func configure(with country: CountryInfo) {
         countryName.text = country.name
-        
+        if let flagURL = country.flag {
+            flagImage.sd_setImage(with: URL(string: flagURL), completed: nil)
+        }
     }
     
 }
