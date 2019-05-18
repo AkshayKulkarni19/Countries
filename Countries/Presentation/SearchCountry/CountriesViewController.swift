@@ -22,8 +22,10 @@ class CountriesViewController: UIViewController {
         }
     }
     var presenter: CountriesPresenter?
+    var router: CountriesRouter?
     private let configurator = CountriesConfiguratorImpl()
     private let searchController = UISearchController(searchResultsController: nil)
+    private var selectedCountry: CountryInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,12 @@ class CountriesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectedCountry = selectedCountry {
+            router?.prepare(for: segue, sender: sender, country: selectedCountry)
+        }
+    }
 
 }
 
@@ -68,6 +76,13 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let country = presenter?.getCountry(at: indexPath.row) {
+            selectedCountry = country
+            performSegue(withIdentifier: "showCountryDetails", sender: nil)
+        }
+    }
+    
 }
 
 extension CountriesViewController: CountriesView {
@@ -80,6 +95,8 @@ extension CountriesViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else { return }
-        presenter?.fetchCountries(with: searchText)
+        if !searchText.isEmpty {
+            presenter?.fetchCountries(with: searchText)
+        }
     }
 }

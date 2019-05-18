@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CountriesTests/Services/FetchContriesServiceTest.swift"
-            timestampString = "579629968.052083"
+            timestampString = "579719737.286629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Countries/Data/Common/BaseService.swift"
-            timestampString = "579629968.052536"
+            filePath = "Countries/Presentation/CountryDetails/CountryDetailsViewController.swift"
+            timestampString = "579719737.286742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "loadData(type:url:method:parameters:headers:completion:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Countries/Data/Common/BaseService.swift"
-            timestampString = "579629968.052757"
+            filePath = "Countries/Presentation/SearchCountry/CountriesViewController.swift"
+            timestampString = "579719737.2868429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "loadData(type:url:method:parameters:headers:completion:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,46 +57,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Countries/Domain/FetchCountriesUseCase.swift"
-            timestampString = "579629968.05339"
+            filePath = "Countries/Presentation/CountryDetails/CountryDetailsViewController.swift"
+            timestampString = "579719737.286926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "fetchCountriesFromService(with:completion:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "CountryDetailsViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Countries/Presentation/CountryDetails/CountryDetailsViewController.swift"
+            timestampString = "579719737.287006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Countries.FetchCountriesUseCaseImpl.fetchCountriesFromService(with: Swift.String, completion: (Alamofire.Result&lt;Swift.Array&lt;Countries.CountryInfo&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Countries"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/akshay.kulkarni/Projects/CityFinder/Countries/Countries/Countries/Domain/FetchCountriesUseCase.swift"
-                  timestampString = "579627428.297726"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "41">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.Result&lt;Swift.Array&lt;Countries.CountryResponse&gt;&gt;) -&gt; () in Countries.FetchCountriesUseCaseImpl.fetchCountriesFromService(with: Swift.String, completion: (Alamofire.Result&lt;Swift.Array&lt;Countries.CountryInfo&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Countries"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/akshay.kulkarni/Projects/CityFinder/Countries/Countries/Countries/Domain/FetchCountriesUseCase.swift"
-                  timestampString = "579627428.299904"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "55">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Countries/Presentation/CountryDetails/CountryDetailsPresenter.swift"
+            timestampString = "579719737.2870899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "prepareFields()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Countries/Presentation/CountryDetails/CountryDetailsPresenter.swift"
+            timestampString = "579719737.287172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "prepareFields()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

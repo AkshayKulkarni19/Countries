@@ -18,8 +18,8 @@ class CountriesConfiguratorImpl {
         let service = FetchCountriesServiceImpl()
         let repository = FetchCountriesRepositoryImpl(service: service)
         let useCase = FetchCountriesUseCaseImpl(repository: repository)
-        
         let presenter = CountriesPresenterImpl(fetchCountriesUseCase: useCase, countriesVC: viewcontroller)
         viewcontroller.presenter = presenter
+        viewcontroller.router = CountriesRouterImpl(viewController: viewcontroller)
     }
 }
