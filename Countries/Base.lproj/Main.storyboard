@@ -35,11 +35,42 @@
                     <navigationItem key="navigationItem" id="2pH-eD-pIM"/>
                     <connections>
                         <outlet property="countryTableView" destination="tKj-EG-5ji" id="K8t-l7-GVW"/>
+                        <segue destination="lhk-l9-ruZ" kind="show" identifier="showCountryDetails" id="223-B4-foy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="99.400299850074973"/>
+        </scene>
+        <!--Country Details View Controller-->
+        <scene sceneID="puN-LW-KfX">
+            <objects>
+                <viewController storyboardIdentifier="CountryDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lhk-l9-ruZ" customClass="CountryDetailsViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WvI-fV-jY1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vXX-4E-W0r">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vXX-4E-W0r" firstAttribute="trailing" secondItem="yqd-bM-sCc" secondAttribute="trailing" id="8rr-2p-c4A"/>
+                            <constraint firstItem="vXX-4E-W0r" firstAttribute="bottom" secondItem="yqd-bM-sCc" secondAttribute="bottom" id="T1v-Xd-pjE"/>
+                            <constraint firstItem="vXX-4E-W0r" firstAttribute="top" secondItem="yqd-bM-sCc" secondAttribute="top" id="lBb-6l-NeH"/>
+                            <constraint firstItem="vXX-4E-W0r" firstAttribute="leading" secondItem="yqd-bM-sCc" secondAttribute="leading" id="yBP-6W-XoL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yqd-bM-sCc"/>
+                    </view>
+                    <connections>
+                        <outlet property="countryDetailTableView" destination="vXX-4E-W0r" id="OXh-bF-8Rr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1D-UC-wKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="98.50074962518741"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fTM-7c-9dd">

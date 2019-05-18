@@ -12,22 +12,22 @@ class CountryUIMapper {
     
     static func convertUIModel(countryResponse: [CountryResponse]) -> [CountryInfo] {
         
-        var currenciesInCountry: [CurrenciesInCountry]?
-        var laguagesInCountry: [LanguagesInCountry]?
+        var currenciesInCountry = [CurrenciesInCountry]()
+        var laguagesInCountry = [LanguagesInCountry]()
         var countryInfo = [CountryInfo]()
         
         for country in countryResponse {
             
             if let currencies = country.currencies {
                 for currency in currencies{
-                    currenciesInCountry?.append(CurrenciesInCountry.init(name: currency.name, symbol: currency.symbol))
+                    currenciesInCountry.append(CurrenciesInCountry.init(name: currency.name, symbol: currency.symbol))
                 }
             }
             
             if let languages = country.languages{
                 for language in languages {
                     
-                    laguagesInCountry?.append(LanguagesInCountry.init(name: language.name, nativeName: language.nativeName))
+                    laguagesInCountry.append(LanguagesInCountry.init(name: language.name, nativeName: language.nativeName))
                 }
             }
             
