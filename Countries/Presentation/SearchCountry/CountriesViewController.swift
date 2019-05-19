@@ -146,6 +146,10 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {
         return UIView()
     }
     
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
+    }
+    
 }
 
 extension CountriesViewController: CountriesView {
