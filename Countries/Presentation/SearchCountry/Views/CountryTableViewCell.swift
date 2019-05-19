@@ -25,9 +25,10 @@ class CountryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    override func prepareForReuse() {
-//        self.flagImage.image = nil
-//    }
+    override func prepareForReuse() {
+        self.flagImage.layer.sublayers = nil
+        self.flagImage = nil
+    }
     
     func configure(with country: CountryInfo) {
         
@@ -41,7 +42,6 @@ class CountryTableViewCell: UITableViewCell {
                     self.flagImage.image = image
                 }
             }
-//            self.flagImage.cacheImage(urlString: flagURLstr)
         }
     }
     

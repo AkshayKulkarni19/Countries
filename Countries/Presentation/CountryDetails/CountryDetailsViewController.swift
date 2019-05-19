@@ -38,7 +38,6 @@ class CountryDetailsViewController: UIViewController {
         } else {
             navigationItem.rightBarButtonItem?.isEnabled = false
         }
-        countryDetailTableView.register(UINib(nibName: "FlagHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "FlagHeaderView")
     }
     
 
@@ -54,7 +53,7 @@ class CountryDetailsViewController: UIViewController {
     
     @objc func saveTapped() {
         if let selectedCountry = presenter?.getSelectedCountry() {
-            presenter?.saveCountry(country: selectedCountry, with: imageToSave!)
+            presenter?.saveCountry(country: selectedCountry, with: imageToSave ?? UIImage())
         }
     }
 

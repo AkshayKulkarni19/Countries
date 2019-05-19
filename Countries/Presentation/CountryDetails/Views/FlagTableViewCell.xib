@@ -19,15 +19,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CQ-7r-AvG">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46w-VZ-lrm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
-                    </imageView>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CQ-7r-AvG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0CQ-7r-AvG" firstAttribute="leading" secondItem="46w-VZ-lrm" secondAttribute="leading" id="Nz8-Qw-yUL"/>
+                            <constraint firstItem="0CQ-7r-AvG" firstAttribute="top" secondItem="46w-VZ-lrm" secondAttribute="top" id="XSv-Xm-OEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0CQ-7r-AvG" secondAttribute="trailing" id="YRR-Ws-87d"/>
+                            <constraint firstAttribute="bottom" secondItem="0CQ-7r-AvG" secondAttribute="bottom" id="pIc-LT-u0u"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="0CQ-7r-AvG" secondAttribute="trailing" id="3mb-QP-M13"/>
-                    <constraint firstAttribute="bottom" secondItem="0CQ-7r-AvG" secondAttribute="bottom" id="5sT-9D-5RU"/>
-                    <constraint firstItem="0CQ-7r-AvG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wWp-SE-8iT"/>
-                    <constraint firstItem="0CQ-7r-AvG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zC2-El-gXi"/>
+                    <constraint firstItem="46w-VZ-lrm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QrF-cq-l3f"/>
+                    <constraint firstAttribute="trailing" secondItem="46w-VZ-lrm" secondAttribute="trailing" id="l2k-2k-LhX"/>
+                    <constraint firstAttribute="bottom" secondItem="46w-VZ-lrm" secondAttribute="bottom" id="neG-Mk-CMW"/>
+                    <constraint firstItem="46w-VZ-lrm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="puk-mP-mK7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
