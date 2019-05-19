@@ -48,7 +48,7 @@ class CountriesViewController: UIViewController {
         if !NetworkConnectivity.sharedInstance.isConnectedToInternet() {
             presenter?.fetchCountriesFromDB()
         }
-        
+        addNetworkObservers()
         activityIndicator = UIActivityIndicatorView(frame: CGRect(x: (countryTableView.frame.width/2), y: (countryTableView.frame.height/2), width: 20, height: 20))
         activityIndicator?.style = .gray
     }
@@ -62,6 +62,29 @@ class CountriesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func addNetworkObservers() {
+        // just to ensure that the observer is not added twice
+        removeNetworkObservers()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(networkAvailableNotificationHandler), name: Notification.Name(AppNetworkListenerNotifications.internetAvailableNotification), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(networkUnavailableNotificationHandler), name: Notification.Name(AppNetworkListenerNotifications.internetNotAvailableNotification), object: nil)
+    }
+    
+    private func removeNetworkObservers() {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(AppNetworkListenerNotifications.internetAvailableNotification), object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(AppNetworkListenerNotifications.internetNotAvailableNotification), object: nil)
+    }
+    
+    @objc func networkAvailableNotificationHandler() {
+        presenter?.clearCountries()
+    }
+    
+    @objc func networkUnavailableNotificationHandler() {
+        presenter?.fetchCountriesFromDB()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectedCountry = selectedCountry {

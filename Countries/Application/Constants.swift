@@ -21,3 +21,8 @@ struct APIUrlsConstant {
     }
     
 }
+
+struct AppNetworkListenerNotifications {
+    static var internetAvailableNotification = "InternetIsAvailable"
+    static var internetNotAvailableNotification = "InternetIsNotAvailable"
+}

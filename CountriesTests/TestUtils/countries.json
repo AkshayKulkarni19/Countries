@@ -1,0 +1,1077 @@
+[
+    {
+        "name": "Bonaire, Sint Eustatius and Saba",
+        "topLevelDomain": [
+            ".an",
+            ".nl"
+        ],
+        "alpha2Code": "BQ",
+        "alpha3Code": "BES",
+        "callingCodes": [
+            "5997"
+        ],
+        "capital": "Kralendijk",
+        "altSpellings": [
+            "BQ",
+            "Boneiru"
+        ],
+        "region": "Americas",
+        "subregion": "Caribbean",
+        "population": 17408,
+        "latlng": [
+            12.15,
+            -68.266667
+        ],
+        "demonym": "Dutch",
+        "area": 294,
+        "gini": null,
+        "timezones": [
+            "UTC-04:00"
+        ],
+        "borders": [],
+        "nativeName": "Bonaire",
+        "numericCode": "535",
+        "currencies": [
+            {
+                "code": "USD",
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "nl",
+                "iso639_2": "nld",
+                "name": "Dutch",
+                "nativeName": "Nederlands"
+            }
+        ],
+        "translations": {
+            "de": "Bonaire, Sint Eustatius und Saba",
+            "es": null,
+            "fr": "Bonaire, Saint-Eustache et Saba",
+            "ja": null,
+            "it": "Bonaire, Saint-Eustache e Saba",
+            "br": "Bonaire",
+            "pt": "Bonaire",
+            "nl": null,
+            "hr": null,
+            "fa": "بونیر"
+        },
+        "flag": "https://restcountries.eu/data/bes.svg",
+        "regionalBlocs": [],
+        "cioc": null
+    },
+    {
+        "name": "Cabo Verde",
+        "topLevelDomain": [
+            ".cv"
+        ],
+        "alpha2Code": "CV",
+        "alpha3Code": "CPV",
+        "callingCodes": [
+            "238"
+        ],
+        "capital": "Praia",
+        "altSpellings": [
+            "CV",
+            "Republic of Cabo Verde",
+            "República de Cabo Verde"
+        ],
+        "region": "Africa",
+        "subregion": "Western Africa",
+        "population": 531239,
+        "latlng": [
+            16,
+            -24
+        ],
+        "demonym": "Cape Verdian",
+        "area": 4033,
+        "gini": 50.5,
+        "timezones": [
+            "UTC-01:00"
+        ],
+        "borders": [],
+        "nativeName": "Cabo Verde",
+        "numericCode": "132",
+        "currencies": [
+            {
+                "code": "CVE",
+                "name": "Cape Verdean escudo",
+                "symbol": "Esc"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "pt",
+                "iso639_2": "por",
+                "name": "Portuguese",
+                "nativeName": "Português"
+            }
+        ],
+        "translations": {
+            "de": "Kap Verde",
+            "es": "Cabo Verde",
+            "fr": "Cap Vert",
+            "ja": "カーボベルデ",
+            "it": "Capo Verde",
+            "br": "Cabo Verde",
+            "pt": "Cabo Verde",
+            "nl": "Kaapverdië",
+            "hr": "Zelenortska Republika",
+            "fa": "کیپ ورد"
+        },
+        "flag": "https://restcountries.eu/data/cpv.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AU",
+                "name": "African Union",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "الاتحاد الأفريقي",
+                    "Union africaine",
+                    "União Africana",
+                    "Unión Africana",
+                    "Umoja wa Afrika"
+                ]
+            }
+        ],
+        "cioc": "CPV"
+    },
+    {
+        "name": "Gabon",
+        "topLevelDomain": [
+            ".ga"
+        ],
+        "alpha2Code": "GA",
+        "alpha3Code": "GAB",
+        "callingCodes": [
+            "241"
+        ],
+        "capital": "Libreville",
+        "altSpellings": [
+            "GA",
+            "Gabonese Republic",
+            "République Gabonaise"
+        ],
+        "region": "Africa",
+        "subregion": "Middle Africa",
+        "population": 1802278,
+        "latlng": [
+            -1,
+            11.75
+        ],
+        "demonym": "Gabonese",
+        "area": 267668,
+        "gini": 41.5,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "CMR",
+            "COG",
+            "GNQ"
+        ],
+        "nativeName": "Gabon",
+        "numericCode": "266",
+        "currencies": [
+            {
+                "code": "XAF",
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            }
+        ],
+        "translations": {
+            "de": "Gabun",
+            "es": "Gabón",
+            "fr": "Gabon",
+            "ja": "ガボン",
+            "it": "Gabon",
+            "br": "Gabão",
+            "pt": "Gabão",
+            "nl": "Gabon",
+            "hr": "Gabon",
+            "fa": "گابن"
+        },
+        "flag": "https://restcountries.eu/data/gab.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AU",
+                "name": "African Union",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "الاتحاد الأفريقي",
+                    "Union africaine",
+                    "União Africana",
+                    "Unión Africana",
+                    "Umoja wa Afrika"
+                ]
+            }
+        ],
+        "cioc": "GAB"
+    },
+    {
+        "name": "Saudi Arabia",
+        "topLevelDomain": [
+            ".sa"
+        ],
+        "alpha2Code": "SA",
+        "alpha3Code": "SAU",
+        "callingCodes": [
+            "966"
+        ],
+        "capital": "Riyadh",
+        "altSpellings": [
+            "SA",
+            "Kingdom of Saudi Arabia",
+            "Al-Mamlakah al-‘Arabiyyah as-Su‘ūdiyyah"
+        ],
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "population": 32248200,
+        "latlng": [
+            25,
+            45
+        ],
+        "demonym": "Saudi Arabian",
+        "area": 2149690,
+        "gini": null,
+        "timezones": [
+            "UTC+03:00"
+        ],
+        "borders": [
+            "IRQ",
+            "JOR",
+            "KWT",
+            "OMN",
+            "QAT",
+            "ARE",
+            "YEM"
+        ],
+        "nativeName": "العربية السعودية",
+        "numericCode": "682",
+        "currencies": [
+            {
+                "code": "SAR",
+                "name": "Saudi riyal",
+                "symbol": "ر.س"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ar",
+                "iso639_2": "ara",
+                "name": "Arabic",
+                "nativeName": "العربية"
+            }
+        ],
+        "translations": {
+            "de": "Saudi-Arabien",
+            "es": "Arabia Saudí",
+            "fr": "Arabie Saoudite",
+            "ja": "サウジアラビア",
+            "it": "Arabia Saudita",
+            "br": "Arábia Saudita",
+            "pt": "Arábia Saudita",
+            "nl": "Saoedi-Arabië",
+            "hr": "Saudijska Arabija",
+            "fa": "عربستان سعودی"
+        },
+        "flag": "https://restcountries.eu/data/sau.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AL",
+                "name": "Arab League",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "جامعة الدول العربية",
+                    "Jāmiʻat ad-Duwal al-ʻArabīyah",
+                    "League of Arab States"
+                ]
+            }
+        ],
+        "cioc": "KSA"
+    },
+    {
+        "name": "Syrian Arab Republic",
+        "topLevelDomain": [
+            ".sy"
+        ],
+        "alpha2Code": "SY",
+        "alpha3Code": "SYR",
+        "callingCodes": [
+            "963"
+        ],
+        "capital": "Damascus",
+        "altSpellings": [
+            "SY",
+            "Syrian Arab Republic",
+            "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah"
+        ],
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "population": 18564000,
+        "latlng": [
+            35,
+            38
+        ],
+        "demonym": "Syrian",
+        "area": 185180,
+        "gini": 35.8,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "IRQ",
+            "ISR",
+            "JOR",
+            "LBN",
+            "TUR"
+        ],
+        "nativeName": "سوريا",
+        "numericCode": "760",
+        "currencies": [
+            {
+                "code": "SYP",
+                "name": "Syrian pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ar",
+                "iso639_2": "ara",
+                "name": "Arabic",
+                "nativeName": "العربية"
+            }
+        ],
+        "translations": {
+            "de": "Syrien",
+            "es": "Siria",
+            "fr": "Syrie",
+            "ja": "シリア・アラブ共和国",
+            "it": "Siria",
+            "br": "Síria",
+            "pt": "Síria",
+            "nl": "Syrië",
+            "hr": "Sirija",
+            "fa": "سوریه"
+        },
+        "flag": "https://restcountries.eu/data/syr.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AL",
+                "name": "Arab League",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "جامعة الدول العربية",
+                    "Jāmiʻat ad-Duwal al-ʻArabīyah",
+                    "League of Arab States"
+                ]
+            }
+        ],
+        "cioc": "SYR"
+    },
+    {
+        "name": "United Arab Emirates",
+        "topLevelDomain": [
+            ".ae"
+        ],
+        "alpha2Code": "AE",
+        "alpha3Code": "ARE",
+        "callingCodes": [
+            "971"
+        ],
+        "capital": "Abu Dhabi",
+        "altSpellings": [
+            "AE",
+            "UAE"
+        ],
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "population": 9856000,
+        "latlng": [
+            24,
+            54
+        ],
+        "demonym": "Emirati",
+        "area": 83600,
+        "gini": null,
+        "timezones": [
+            "UTC+04"
+        ],
+        "borders": [
+            "OMN",
+            "SAU"
+        ],
+        "nativeName": "دولة الإمارات العربية المتحدة",
+        "numericCode": "784",
+        "currencies": [
+            {
+                "code": "AED",
+                "name": "United Arab Emirates dirham",
+                "symbol": "د.إ"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ar",
+                "iso639_2": "ara",
+                "name": "Arabic",
+                "nativeName": "العربية"
+            }
+        ],
+        "translations": {
+            "de": "Vereinigte Arabische Emirate",
+            "es": "Emiratos Árabes Unidos",
+            "fr": "Émirats arabes unis",
+            "ja": "アラブ首長国連邦",
+            "it": "Emirati Arabi Uniti",
+            "br": "Emirados árabes Unidos",
+            "pt": "Emirados árabes Unidos",
+            "nl": "Verenigde Arabische Emiraten",
+            "hr": "Ujedinjeni Arapski Emirati",
+            "fa": "امارات متحده عربی"
+        },
+        "flag": "https://restcountries.eu/data/are.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AL",
+                "name": "Arab League",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "جامعة الدول العربية",
+                    "Jāmiʻat ad-Duwal al-ʻArabīyah",
+                    "League of Arab States"
+                ]
+            }
+        ],
+        "cioc": "UAE"
+    },
+    {
+        "name": "Zimbabwe",
+        "topLevelDomain": [
+            ".zw"
+        ],
+        "alpha2Code": "ZW",
+        "alpha3Code": "ZWE",
+        "callingCodes": [
+            "263"
+        ],
+        "capital": "Harare",
+        "altSpellings": [
+            "ZW",
+            "Republic of Zimbabwe"
+        ],
+        "region": "Africa",
+        "subregion": "Eastern Africa",
+        "population": 14240168,
+        "latlng": [
+            -20,
+            30
+        ],
+        "demonym": "Zimbabwean",
+        "area": 390757,
+        "gini": null,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "BWA",
+            "MOZ",
+            "ZAF",
+            "ZMB"
+        ],
+        "nativeName": "Zimbabwe",
+        "numericCode": "716",
+        "currencies": [
+            {
+                "code": "BWP",
+                "name": "Botswana pula",
+                "symbol": "P"
+            },
+            {
+                "code": "GBP",
+                "name": "British pound",
+                "symbol": "£"
+            },
+            {
+                "code": "CNY",
+                "name": "Chinese yuan",
+                "symbol": "¥"
+            },
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            },
+            {
+                "code": "INR",
+                "name": "Indian rupee",
+                "symbol": "₹"
+            },
+            {
+                "code": "JPY",
+                "name": "Japanese yen",
+                "symbol": "¥"
+            },
+            {
+                "code": "ZAR",
+                "name": "South African rand",
+                "symbol": "Rs"
+            },
+            {
+                "code": "USD",
+                "name": "United States dollar",
+                "symbol": "$"
+            },
+            {
+                "code": "(none)",
+                "name": null,
+                "symbol": null
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            },
+            {
+                "iso639_1": "sn",
+                "iso639_2": "sna",
+                "name": "Shona",
+                "nativeName": "chiShona"
+            },
+            {
+                "iso639_1": "nd",
+                "iso639_2": "nde",
+                "name": "Northern Ndebele",
+                "nativeName": "isiNdebele"
+            }
+        ],
+        "translations": {
+            "de": "Simbabwe",
+            "es": "Zimbabue",
+            "fr": "Zimbabwe",
+            "ja": "ジンバブエ",
+            "it": "Zimbabwe",
+            "br": "Zimbabwe",
+            "pt": "Zimbabué",
+            "nl": "Zimbabwe",
+            "hr": "Zimbabve",
+            "fa": "زیمباوه"
+        },
+        "flag": "https://restcountries.eu/data/zwe.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AU",
+                "name": "African Union",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "الاتحاد الأفريقي",
+                    "Union africaine",
+                    "União Africana",
+                    "Unión Africana",
+                    "Umoja wa Afrika"
+                ]
+            }
+        ],
+        "cioc": "ZIM"
+    },
+    {
+        "name": "Brunei Darussalam",
+        "topLevelDomain": [
+            ".bn"
+        ],
+        "alpha2Code": "BN",
+        "alpha3Code": "BRN",
+        "callingCodes": [
+            "673"
+        ],
+        "capital": "Bandar Seri Begawan",
+        "altSpellings": [
+            "BN",
+            "Nation of Brunei",
+            " the Abode of Peace"
+        ],
+        "region": "Asia",
+        "subregion": "South-Eastern Asia",
+        "population": 411900,
+        "latlng": [
+            4.5,
+            114.66666666
+        ],
+        "demonym": "Bruneian",
+        "area": 5765,
+        "gini": null,
+        "timezones": [
+            "UTC+08:00"
+        ],
+        "borders": [
+            "MYS"
+        ],
+        "nativeName": "Negara Brunei Darussalam",
+        "numericCode": "096",
+        "currencies": [
+            {
+                "code": "BND",
+                "name": "Brunei dollar",
+                "symbol": "$"
+            },
+            {
+                "code": "SGD",
+                "name": "Singapore dollar",
+                "symbol": "$"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ms",
+                "iso639_2": "msa",
+                "name": "Malay",
+                "nativeName": "bahasa Melayu"
+            }
+        ],
+        "translations": {
+            "de": "Brunei",
+            "es": "Brunei",
+            "fr": "Brunei",
+            "ja": "ブルネイ・ダルサラーム",
+            "it": "Brunei",
+            "br": "Brunei",
+            "pt": "Brunei",
+            "nl": "Brunei",
+            "hr": "Brunej",
+            "fa": "برونئی"
+        },
+        "flag": "https://restcountries.eu/data/brn.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "ASEAN",
+                "name": "Association of Southeast Asian Nations",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "BRU"
+    },
+    {
+        "name": "Djibouti",
+        "topLevelDomain": [
+            ".dj"
+        ],
+        "alpha2Code": "DJ",
+        "alpha3Code": "DJI",
+        "callingCodes": [
+            "253"
+        ],
+        "capital": "Djibouti",
+        "altSpellings": [
+            "DJ",
+            "Jabuuti",
+            "Gabuuti",
+            "Republic of Djibouti",
+            "République de Djibouti",
+            "Gabuutih Ummuuno",
+            "Jamhuuriyadda Jabuuti"
+        ],
+        "region": "Africa",
+        "subregion": "Eastern Africa",
+        "population": 900000,
+        "latlng": [
+            11.5,
+            43
+        ],
+        "demonym": "Djibouti",
+        "area": 23200,
+        "gini": 40,
+        "timezones": [
+            "UTC+03:00"
+        ],
+        "borders": [
+            "ERI",
+            "ETH",
+            "SOM"
+        ],
+        "nativeName": "Djibouti",
+        "numericCode": "262",
+        "currencies": [
+            {
+                "code": "DJF",
+                "name": "Djiboutian franc",
+                "symbol": "Fr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            },
+            {
+                "iso639_1": "ar",
+                "iso639_2": "ara",
+                "name": "Arabic",
+                "nativeName": "العربية"
+            }
+        ],
+        "translations": {
+            "de": "Dschibuti",
+            "es": "Yibuti",
+            "fr": "Djibouti",
+            "ja": "ジブチ",
+            "it": "Gibuti",
+            "br": "Djibuti",
+            "pt": "Djibuti",
+            "nl": "Djibouti",
+            "hr": "Džibuti",
+            "fa": "جیبوتی"
+        },
+        "flag": "https://restcountries.eu/data/dji.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AU",
+                "name": "African Union",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "الاتحاد الأفريقي",
+                    "Union africaine",
+                    "União Africana",
+                    "Unión Africana",
+                    "Umoja wa Afrika"
+                ]
+            },
+            {
+                "acronym": "AL",
+                "name": "Arab League",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "جامعة الدول العربية",
+                    "Jāmiʻat ad-Duwal al-ʻArabīyah",
+                    "League of Arab States"
+                ]
+            }
+        ],
+        "cioc": "DJI"
+    },
+    {
+        "name": "Egypt",
+        "topLevelDomain": [
+            ".eg"
+        ],
+        "alpha2Code": "EG",
+        "alpha3Code": "EGY",
+        "callingCodes": [
+            "20"
+        ],
+        "capital": "Cairo",
+        "altSpellings": [
+            "EG",
+            "Arab Republic of Egypt"
+        ],
+        "region": "Africa",
+        "subregion": "Northern Africa",
+        "population": 91290000,
+        "latlng": [
+            27,
+            30
+        ],
+        "demonym": "Egyptian",
+        "area": 1002450,
+        "gini": 30.8,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "ISR",
+            "LBY",
+            "SDN"
+        ],
+        "nativeName": "مصر‎",
+        "numericCode": "818",
+        "currencies": [
+            {
+                "code": "EGP",
+                "name": "Egyptian pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ar",
+                "iso639_2": "ara",
+                "name": "Arabic",
+                "nativeName": "العربية"
+            }
+        ],
+        "translations": {
+            "de": "Ägypten",
+            "es": "Egipto",
+            "fr": "Égypte",
+            "ja": "エジプト",
+            "it": "Egitto",
+            "br": "Egito",
+            "pt": "Egipto",
+            "nl": "Egypte",
+            "hr": "Egipat",
+            "fa": "مصر"
+        },
+        "flag": "https://restcountries.eu/data/egy.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AU",
+                "name": "African Union",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "الاتحاد الأفريقي",
+                    "Union africaine",
+                    "União Africana",
+                    "Unión Africana",
+                    "Umoja wa Afrika"
+                ]
+            },
+            {
+                "acronym": "AL",
+                "name": "Arab League",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "جامعة الدول العربية",
+                    "Jāmiʻat ad-Duwal al-ʻArabīyah",
+                    "League of Arab States"
+                ]
+            }
+        ],
+        "cioc": "EGY"
+    },
+    {
+        "name": "Estonia",
+        "topLevelDomain": [
+            ".ee"
+        ],
+        "alpha2Code": "EE",
+        "alpha3Code": "EST",
+        "callingCodes": [
+            "372"
+        ],
+        "capital": "Tallinn",
+        "altSpellings": [
+            "EE",
+            "Eesti",
+            "Republic of Estonia",
+            "Eesti Vabariik"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 1315944,
+        "latlng": [
+            59,
+            26
+        ],
+        "demonym": "Estonian",
+        "area": 45227,
+        "gini": 36,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "LVA",
+            "RUS"
+        ],
+        "nativeName": "Eesti",
+        "numericCode": "233",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "et",
+                "iso639_2": "est",
+                "name": "Estonian",
+                "nativeName": "eesti"
+            }
+        ],
+        "translations": {
+            "de": "Estland",
+            "es": "Estonia",
+            "fr": "Estonie",
+            "ja": "エストニア",
+            "it": "Estonia",
+            "br": "Estônia",
+            "pt": "Estónia",
+            "nl": "Estland",
+            "hr": "Estonija",
+            "fa": "استونی"
+        },
+        "flag": "https://restcountries.eu/data/est.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "EST"
+    },
+    {
+        "name": "Kiribati",
+        "topLevelDomain": [
+            ".ki"
+        ],
+        "alpha2Code": "KI",
+        "alpha3Code": "KIR",
+        "callingCodes": [
+            "686"
+        ],
+        "capital": "South Tarawa",
+        "altSpellings": [
+            "KI",
+            "Republic of Kiribati",
+            "Ribaberiki Kiribati"
+        ],
+        "region": "Oceania",
+        "subregion": "Micronesia",
+        "population": 113400,
+        "latlng": [
+            1.41666666,
+            173
+        ],
+        "demonym": "I-Kiribati",
+        "area": 811,
+        "gini": null,
+        "timezones": [
+            "UTC+12:00",
+            "UTC+13:00",
+            "UTC+14:00"
+        ],
+        "borders": [],
+        "nativeName": "Kiribati",
+        "numericCode": "296",
+        "currencies": [
+            {
+                "code": "AUD",
+                "name": "Australian dollar",
+                "symbol": "$"
+            },
+            {
+                "code": "(none)",
+                "name": "Kiribati dollar",
+                "symbol": "$"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            }
+        ],
+        "translations": {
+            "de": "Kiribati",
+            "es": "Kiribati",
+            "fr": "Kiribati",
+            "ja": "キリバス",
+            "it": "Kiribati",
+            "br": "Kiribati",
+            "pt": "Quiribáti",
+            "nl": "Kiribati",
+            "hr": "Kiribati",
+            "fa": "کیریباتی"
+        },
+        "flag": "https://restcountries.eu/data/kir.svg",
+        "regionalBlocs": [],
+        "cioc": "KIR"
+    },
+    {
+        "name": "Vanuatu",
+        "topLevelDomain": [
+            ".vu"
+        ],
+        "alpha2Code": "VU",
+        "alpha3Code": "VUT",
+        "callingCodes": [
+            "678"
+        ],
+        "capital": "Port Vila",
+        "altSpellings": [
+            "VU",
+            "Republic of Vanuatu",
+            "Ripablik blong Vanuatu",
+            "République de Vanuatu"
+        ],
+        "region": "Oceania",
+        "subregion": "Melanesia",
+        "population": 277500,
+        "latlng": [
+            -16,
+            167
+        ],
+        "demonym": "Ni-Vanuatu",
+        "area": 12189,
+        "gini": null,
+        "timezones": [
+            "UTC+11:00"
+        ],
+        "borders": [],
+        "nativeName": "Vanuatu",
+        "numericCode": "548",
+        "currencies": [
+            {
+                "code": "VUV",
+                "name": "Vanuatu vatu",
+                "symbol": "Vt"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "bi",
+                "iso639_2": "bis",
+                "name": "Bislama",
+                "nativeName": "Bislama"
+            },
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            },
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            }
+        ],
+        "translations": {
+            "de": "Vanuatu",
+            "es": "Vanuatu",
+            "fr": "Vanuatu",
+            "ja": "バヌアツ",
+            "it": "Vanuatu",
+            "br": "Vanuatu",
+            "pt": "Vanuatu",
+            "nl": "Vanuatu",
+            "hr": "Vanuatu",
+            "fa": "وانواتو"
+        },
+        "flag": "https://restcountries.eu/data/vut.svg",
+        "regionalBlocs": [],
+        "cioc": "VAN"
+    }
+]
