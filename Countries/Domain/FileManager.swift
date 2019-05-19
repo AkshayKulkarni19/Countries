@@ -19,7 +19,7 @@ class ImageManager {
         return documentsDirectory.appendingPathComponent("Images", isDirectory: true)
     }
     
-    class func saveImageDocumentDirectory(image: UIImage, name: String) -> String?{
+    class func saveImageDocumentDirectory(image: UIImage, name: String){
         createDirectory()
         let fileName = name
         // create the destination file url to save your image
@@ -33,13 +33,11 @@ class ImageManager {
                     // writes the image data to disk
                     try data.write(to: fileURL)
                     print("file saved")
-                    return fileURL.path
                 } catch {
                     print("error saving file:", error)
                 }
             }
         }
-        return nil
     }
     
     class func getImage(with filename: String) -> UIImage? {

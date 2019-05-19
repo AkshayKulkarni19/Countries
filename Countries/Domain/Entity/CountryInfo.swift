@@ -30,3 +30,26 @@ struct LanguagesInCountry {
     let name : String?
     let nativeName : String?
 }
+
+extension CountryInfo: Equatable {
+    
+    static func == (lhs: CountryInfo, rhs: CountryInfo) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.callingCodes == rhs.callingCodes &&
+            lhs.capital == rhs.capital &&
+            lhs.flag == rhs.flag &&
+            lhs.region == rhs.region &&
+            lhs.timezones == rhs.timezones &&
+            lhs.languages == rhs.languages &&
+            lhs.currencies == rhs.currencies &&
+            lhs.subregion == rhs.subregion
+    }
+}
+
+extension CurrenciesInCountry: Equatable {
+    
+}
+
+extension LanguagesInCountry: Equatable {
+    
+}
