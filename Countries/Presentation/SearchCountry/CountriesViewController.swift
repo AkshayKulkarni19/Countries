@@ -10,6 +10,8 @@ import UIKit
 
 protocol CountriesView {
     func reloadData()
+    func showIndicator()
+    func hideIndicator()
 }
 
 class CountriesViewController: UIViewController {
@@ -19,6 +21,7 @@ class CountriesViewController: UIViewController {
             countryTableView.delegate = self
             countryTableView.dataSource = self
             countryTableView.register(UINib(nibName: "CountryTableViewCell", bundle: nil), forCellReuseIdentifier: "CountryTableViewCell")
+            countryTableView.register(UINib(nibName: "NoCountryTableViewCell", bundle: nil), forCellReuseIdentifier: "NoCountryTableViewCell")
         }
     }
     var presenter: CountriesPresenter?
@@ -26,6 +29,8 @@ class CountriesViewController: UIViewController {
     private let configurator = CountriesConfiguratorImpl()
     private let searchController = UISearchController(searchResultsController: nil)
     private var selectedCountry: CountryInfo?
+    private var activityIndicator: UIActivityIndicatorView?
+    private var numberOfCountries: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,9 @@ class CountriesViewController: UIViewController {
         if !NetworkConnectivity.sharedInstance.isConnectedToInternet() {
             presenter?.fetchCountriesFromDB()
         }
+        
+        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: (countryTableView.frame.width/2), y: (countryTableView.frame.height/2), width: 20, height: 20))
+        activityIndicator?.style = .gray
     }
     
     /*
@@ -64,10 +72,33 @@ class CountriesViewController: UIViewController {
 
 extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.getNumberOfCountries() ?? 0
+        numberOfCountries = presenter?.getNumberOfCountries() ?? 0
+        if numberOfCountries > 0 {
+            return numberOfCountries
+        } else {
+            return 1
+        }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if numberOfCountries == 0{
+            return tableView.frame.height
+        }
+        return UITableView.automaticDimension
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if numberOfCountries == 0 {
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "NoCountryTableViewCell", for: indexPath) as? NoCountryTableViewCell {
+                if let searchtext = searchController.searchBar.text, searchController.isActive && !searchtext.isEmpty {
+                    cell.configure(message: String(format: "Search.NoCountyFound.message".localized, searchtext))
+                } else {
+                    cell.configure(message: "Search.Initial.message".localized)
+                }
+                return cell
+            }
+            return UITableViewCell()
+        }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CountryTableViewCell", for: indexPath) as? CountryTableViewCell {
             
             if let country = presenter?.getCountry(at: indexPath.row) {
@@ -79,10 +110,17 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let country = presenter?.getCountry(at: indexPath.row) {
-            selectedCountry = country
-            performSegue(withIdentifier: "showCountryDetails", sender: nil)
+        if numberOfCountries != 0{
+            if let country = presenter?.getCountry(at: indexPath.row) {
+                selectedCountry = country
+                tableView.deselectRow(at: indexPath, animated: true)
+                performSegue(withIdentifier: "showCountryDetails", sender: nil)
+            }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
 }
@@ -91,6 +129,18 @@ extension CountriesViewController: CountriesView {
     func reloadData() {
         countryTableView.reloadData()
     }
+    
+    func showIndicator() {
+        activityIndicator?.startAnimating()
+        if let indicator = activityIndicator {
+            countryTableView.addSubview(indicator)
+        }
+    }
+    
+    func hideIndicator() {
+        activityIndicator?.stopAnimating()
+        activityIndicator?.removeFromSuperview()
+    }
 }
 
 extension CountriesViewController: UISearchResultsUpdating {
@@ -98,7 +148,17 @@ extension CountriesViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else { return }
         if !searchText.isEmpty {
-            presenter?.fetchCountries(with: searchText)
+            if NetworkConnectivity.sharedInstance.isConnectedToInternet() {
+                presenter?.fetchCountries(with: searchText)
+            }else {
+                presenter?.fetchCountriesOffline(with: searchText)
+            }
+        } else {
+            if NetworkConnectivity.sharedInstance.isConnectedToInternet() {
+                presenter?.clearCountries()
+            } else {
+                presenter?.fetchCountriesOffline(with: searchText)
+            }
         }
     }
 }

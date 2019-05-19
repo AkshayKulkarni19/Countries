@@ -25,11 +25,23 @@ class CountryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    override func prepareForReuse() {
+//        self.flagImage.image = nil
+//    }
+    
     func configure(with country: CountryInfo) {
-        self.flagImage.image = UIImage()
+        
         countryName.text = country.name
-        if let flagURLstr = country.flag {
-            self.flagImage.cacheImage(urlString: flagURLstr)
+        if let savedPath = country.flagSavedPath {
+            let fileName = URL(string: savedPath)?.lastPathComponent
+            self.flagImage.image = ImageManager.getImage(with: fileName ?? "")
+        } else if let flagURLstr = country.flag {
+            self.flagImage.cacheImage(urlString: flagURLstr) { (image, url) in
+                if url == flagURLstr {
+                    self.flagImage.image = image
+                }
+            }
+//            self.flagImage.cacheImage(urlString: flagURLstr)
         }
     }
     

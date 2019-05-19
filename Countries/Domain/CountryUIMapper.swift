@@ -32,7 +32,7 @@ class CountryUIMapper {
                 }
             }
             
-            let countryInfo = CountryInfo.init(name: country.name, callingCodes: country.callingCodes ?? [String](), capital: country.capital, region: country.region, subregion: country.subregion, timezones: country.timezones ?? [String](), currencies: currenciesInCountry, languages: laguagesInCountry, flag: country.flag)
+            let countryInfo = CountryInfo.init(name: country.name, callingCodes: country.callingCodes ?? [String](), capital: country.capital, region: country.region, subregion: country.subregion, timezones: country.timezones ?? [String](), currencies: currenciesInCountry, languages: laguagesInCountry, flag: country.flag, flagSavedPath: nil)
             countriesInfo.append(countryInfo)
         }
         
@@ -46,7 +46,7 @@ class CountryUIMapper {
         var countriesInfo = [CountryInfo]()
         
         for country in countryResponse {
-            
+            var savedFilePath: String?
             for currency in country.currencies{
                 let currencyInCountry = CurrenciesInCountry(name: currency.name, symbol: currency.symbol)
                 currenciesInCountry.append(currencyInCountry)
@@ -56,8 +56,11 @@ class CountryUIMapper {
                 let languageInCountry = LanguagesInCountry(name: language.name, nativeName: language.nativeName)
                 laguagesInCountry.append(languageInCountry)
             }
+            if let filePath = country.flag, let fileName = URL(string: filePath)?.lastPathComponent {
+                savedFilePath = ImageManager.getImageDirectoryPathName(for: fileName)
+            }
             
-            let countryInfo = CountryInfo(name: country.name, callingCodes: Array(country.callingCodesList), capital: country.capital, region: country.region, subregion: country.subregion, timezones: Array(country.timezones), currencies: currenciesInCountry, languages: laguagesInCountry, flag: country.flag)
+            let countryInfo = CountryInfo(name: country.name, callingCodes: Array(country.callingCodesList), capital: country.capital, region: country.region, subregion: country.subregion, timezones: Array(country.timezones), currencies: currenciesInCountry, languages: laguagesInCountry, flag: country.flag, flagSavedPath: savedFilePath)
             countriesInfo.append(countryInfo)
         }
         

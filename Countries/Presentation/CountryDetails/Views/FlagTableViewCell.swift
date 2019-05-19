@@ -22,8 +22,18 @@ class FlagTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureImage(from url: String) {
-        flagImage.cacheImage(urlString: url)
+    func configureImage(from country: CountryInfo) {
+        if let savedPath = country.flagSavedPath {
+            let fileName = URL(string: savedPath)?.lastPathComponent
+            self.flagImage.image = ImageManager.getImage(with: fileName ?? "")
+        } else {
+            if let url = country.flag {
+                flagImage.cacheImage(urlString: url) { (image, urlFlag) in
+                    if url == urlFlag {
+                        self.flagImage.image = image
+                    }
+                }
+            }
+        }
     }
-    
 }

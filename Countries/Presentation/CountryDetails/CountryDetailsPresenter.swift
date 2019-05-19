@@ -13,7 +13,7 @@ protocol CountryDetailsPresenter {
     func getNumberOfDetails() -> Int
     func getDetails(at index: Int) -> CountryDetailFieldsModel
     func getSelectedCountry() -> CountryInfo
-    func saveCountry(country: CountryInfo)
+    func saveCountry(country: CountryInfo, with image:UIImage)
 }
 
 class CountryDetailsPresenterImpl: CountryDetailsPresenter {
@@ -82,7 +82,11 @@ class CountryDetailsPresenterImpl: CountryDetailsPresenter {
         return country
     }
     
-    func saveCountry(country: CountryInfo) {
-        saveCountryUseCase?.saveCountryInDB(countryToSave: country)
+    func saveCountry(country: CountryInfo, with image:UIImage) {
+        saveCountryUseCase?.saveCountryInDB(countryToSave: country, image: image)
+    }
+    
+    func saveImageInDocument(imageToSave: UIImage) {
+        
     }
 }

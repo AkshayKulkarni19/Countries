@@ -18,6 +18,7 @@ struct CountryInfo {
     let currencies : [CurrenciesInCountry]?
     let languages : [LanguagesInCountry]?
     let flag : String?
+    let flagSavedPath: String?
 }
 
 struct CurrenciesInCountry {
