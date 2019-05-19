@@ -18,7 +18,7 @@ open class DatabaseCore: NSObject {
     
     override init(){
         realm = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+
     }
     
     open class func handleDatabaseMigration() {
