@@ -1,32 +1,36 @@
 PODS:
   - Alamofire (4.8.1)
+  - CocoaLumberjack (3.5.0):
+    - CocoaLumberjack/Core (= 3.5.0)
+  - CocoaLumberjack/Core (3.5.0)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
   - RealmSwift
-  - SDWebImage
+  - SVGKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - CocoaLumberjack
     - Realm
     - RealmSwift
-    - SDWebImage
+    - SVGKit
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  CocoaLumberjack: cffaa70a9336515228178e3669b71bd49d343850
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
 
-PODFILE CHECKSUM: 445092c6fc9603bd07e7e9c32368399c5198147a
+PODFILE CHECKSUM: 41966dd8ac71705b221e2a2144931339937859dd
 
 COCOAPODS: 1.5.3

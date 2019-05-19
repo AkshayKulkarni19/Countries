@@ -17,7 +17,7 @@ class BaseService: SessionDelegate {
     private var requestManager: SessionManager?
     
     // defines data request
-    private var dataRequest: DataRequest?
+    var dataRequest: DataRequest?
     
     typealias ResponseCompletion<T: Decodable> = (T?, _ error: Error?, _ data: Data?) -> Void
     
@@ -70,8 +70,9 @@ class BaseService: SessionDelegate {
         }
     }
     
-    private func cancelRequest() {
+    func cancelRequest() {
         dataRequest?.cancel()
+        Logger.log(message: "Data Request is cancelled", messageType: .debug)
     }
     
 }

@@ -20,11 +20,6 @@ open class DatabaseCore: NSObject {
         realm = try! Realm()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
-    /// Realm instance for perfoming the database operation
-    //    fileprivate lazy var realm: Realm? = {
-    //        var realm = try? Realm()
-    //        return realm
-    //    }()
     
     open class func handleDatabaseMigration() {
         let config = Realm.Configuration(
@@ -102,29 +97,6 @@ open class DatabaseCore: NSObject {
         }
     }
     
-    //    /// Writes a Realm object in database using the specified closure where the Realm instance is available.
-    //    ///
-    //    /// - Parameter realmClosure: The closure for the write call.
-    //    open func writeWithRealmClosure(_ realmClosure: @escaping (_ realm: Realm) -> Void){
-    //        guard let realm = realm
-    //            else {
-    //                return
-    //        }
-    //
-    ////        _ = try? realm.write{
-    ////            realmClosure(realm)
-    ////        }
-    //
-    //        // TODO: updated from above
-    //        do{
-    //            try realm.write{
-    //                realmClosure(realm)
-    //            }
-    //        }
-    //        catch (let e){
-    //            notify("realm writeWithRealmClosure error: \(e)", module: .DebugTrip)
-    //        }
-    //    }
     
     /// Deletes a Realm object from the database.
     ///
@@ -179,7 +151,7 @@ open class DatabaseCore: NSObject {
             guard let realm = self?.realm else {
                 return
             }
-            // TODO: updated from above
+            
             do{
                 try realm.write{
                     realm.delete(list)
@@ -218,7 +190,6 @@ open class DatabaseCore: NSObject {
     ///   - predicate: Predicate to be applied on fetch results.
     /// - Returns: The retrieved objects.
     
-    // USE closure for returning
     open func retrieveObjects<T: RealmSwift.Object>(_ type: T.Type, predicate: NSPredicate? = nil, resultClosure: @escaping ((Array<T>) -> Void)){
         DispatchQueue.main.async { [weak self] in
             
@@ -240,8 +211,6 @@ open class DatabaseCore: NSObject {
     ///
     /// - Parameter type: Class Type of objects to be retrieved.
     /// - Returns: The retrieved Realm Results.
-    
-    // TODO: USE closure for returning
     
     open func retrieveResults<T: RealmSwift.Object>(_ type: T.Type, resultClosure: @escaping ((RealmSwift.Results<T>?) -> Void)) {
         DispatchQueue.main.async { [weak self] in
@@ -300,14 +269,6 @@ open class DatabaseCore: NSObject {
         let realmList = List<T>()
         
         realmList.append(objectsIn: array)
-        
-        /*do{
-            try realm.write{
-                realmList.append(objectsIn: array)
-            }
-        } catch (let error){
-            Logger.log(message: "Realm Delete List error: \(error)", messageType: .error)
-        }*/
         
         return realmList
     }

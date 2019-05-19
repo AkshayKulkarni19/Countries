@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SaveCountryInDBUseCase {
-    func saveCountryInDB(countryToSave: CountryInfo)
+    func saveCountryInDB(countryToSave: CountryInfo, image: UIImage)
 }
 
 class SaveCountryInDBUseCaseImpl: SaveCountryInDBUseCase {
@@ -20,7 +20,12 @@ class SaveCountryInDBUseCaseImpl: SaveCountryInDBUseCase {
         self.saveCountryRepository = repository
     }
     
-    func saveCountryInDB(countryToSave: CountryInfo) {
+    func saveCountryInDB(countryToSave: CountryInfo, image: UIImage) {
+        let url = URL(string: countryToSave.flag ?? "")
+        if let name = url?.pathComponents.last {
+            ImageManager.saveImageDocumentDirectory(image: image, name: name)
+        }
+        
         let countryToSaveDB = CountryUIMapper.convertUIToDB(country: countryToSave)
         saveCountryRepository.saveCountryInDB(countryToSave: countryToSaveDB)
     }

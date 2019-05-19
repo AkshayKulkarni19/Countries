@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import SVGKit
 
 class CountryTableViewCell: UITableViewCell {
 
@@ -25,10 +25,23 @@ class CountryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    override func prepareForReuse() {
+//        self.flagImage.image = nil
+//    }
+    
     func configure(with country: CountryInfo) {
+        
         countryName.text = country.name
-        if let flagURL = country.flag {
-            flagImage.sd_setImage(with: URL(string: flagURL), completed: nil)
+        if let savedPath = country.flagSavedPath {
+            let fileName = URL(string: savedPath)?.lastPathComponent
+            self.flagImage.image = ImageManager.getImage(with: fileName ?? "")
+        } else if let flagURLstr = country.flag {
+            self.flagImage.cacheImage(urlString: flagURLstr) { (image, url) in
+                if url == flagURLstr {
+                    self.flagImage.image = image
+                }
+            }
+//            self.flagImage.cacheImage(urlString: flagURLstr)
         }
     }
     

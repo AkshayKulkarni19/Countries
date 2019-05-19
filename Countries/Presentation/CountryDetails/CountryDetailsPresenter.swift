@@ -13,19 +13,18 @@ protocol CountryDetailsPresenter {
     func getNumberOfDetails() -> Int
     func getDetails(at index: Int) -> CountryDetailFieldsModel
     func getSelectedCountry() -> CountryInfo
-    func saveCountry(country: CountryInfo)
+    func saveCountry(country: CountryInfo, with image:UIImage)
 }
 
 class CountryDetailsPresenterImpl: CountryDetailsPresenter {
     
     let country: CountryInfo
-    private let countryDetailsView: CountryDetailsView
+//    private let countryDetailsView: CountryDetailsView
     private var countryDetailFieldsModels = [CountryDetailFieldsModel]()
     let saveCountryUseCase: SaveCountryInDBUseCase?
     
-    init(country: CountryInfo, countriesDetailsVC: CountryDetailsView, saveCountryUseCase: SaveCountryInDBUseCase) {
+    init(country: CountryInfo, saveCountryUseCase: SaveCountryInDBUseCase) {
         self.country = country
-        self.countryDetailsView = countriesDetailsVC
         self.saveCountryUseCase = saveCountryUseCase
     }
     
@@ -83,7 +82,11 @@ class CountryDetailsPresenterImpl: CountryDetailsPresenter {
         return country
     }
     
-    func saveCountry(country: CountryInfo) {
-        saveCountryUseCase?.saveCountryInDB(countryToSave: country)
+    func saveCountry(country: CountryInfo, with image:UIImage) {
+        saveCountryUseCase?.saveCountryInDB(countryToSave: country, image: image)
+    }
+    
+    func saveImageInDocument(imageToSave: UIImage) {
+        
     }
 }
