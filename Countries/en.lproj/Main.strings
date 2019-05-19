@@ -1,0 +1,5 @@
+
+"Navigation.Title" = "Countries";
+"Search.PlaceHolder" = "Search Country";
+"Search.NoCountyFound.message" = "There is no country found with name %@";
+"Search.Initial.message" = "Welcome! You can search any country & we will show you the details of it";
