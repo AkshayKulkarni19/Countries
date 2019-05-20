@@ -27,7 +27,7 @@ class CountryTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         self.flagImage.layer.sublayers = nil
-        self.flagImage = nil
+        self.flagImage.image = nil
     }
     
     func configure(with country: CountryInfo) {
